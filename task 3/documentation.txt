@@ -1,0 +1,68 @@
+Here is a documentation for the random password generator code:
+
+# Random Password Generator
+
+## Introduction
+
+This is a command line based random password generator program written in Python. It generates passwords of given length with a combination of different types of characters.
+
+## Imports
+
+The following modules are imported:
+
+- random - Generates pseudo-random numbers
+- string - Contains constants of ascii character strings
+
+```python
+import random
+import string
+```
+
+## Input
+
+The program prompts the user to enter the desired length of the password. This is read as an integer input.
+
+```python 
+size = int(input("Enter password length: "))
+```
+
+## Character Sets
+
+Different constants from the string module are used to create sets of possible characters to include in the password.
+
+- Lowercase letters
+- Uppercase letters 
+- Digits
+- Special symbols/punctuation
+
+```python
+lower_chr = string.ascii_lowercase 
+upper_chr = string.ascii_uppercase
+num = string.digits
+symbols = string.punctuation
+```
+
+## Password Generation
+
+The 4 character sets are concatenated to form a single string of all possible characters. 
+
+The random.sample() function is used to select k random characters from this string based on the input password length.
+
+These sampled characters are joined together into the final random password string.
+
+```python
+all = lower_chr + upper_chr + num + symbols
+password = "".join(random.sample(all,size)) 
+```
+
+## Output
+
+The generated password is printed for the user.
+
+```python
+print(f"Generated Password is: {password}")
+```
+
+The password contains a random combination of lower, upper, numeric and special characters based on the user input length.
+
+This provides a simple command line random password generator in Python.
