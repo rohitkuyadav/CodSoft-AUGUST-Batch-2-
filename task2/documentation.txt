@@ -1,0 +1,45 @@
+Calculator Program using PySimpleGUI
+Introduction
+
+This program implements a simple calculator GUI application in Python using the PySimpleGUI module. It allows performing basic arithmetic operations like addition, subtraction, multiplication and division.
+Imports
+
+The PySimpleGUI module is imported for building the GUI. This provides an easier interface compared to Tkinter for creating simple GUIs.
+
+python
+
+Copy code
+import PySimpleGUI as sg
+
+GUI Layout
+
+The layout for the calculator is defined as a list of rows, each containing Button elements and one Input element.
+
+    The Input element at the top shows the calculation expression and result.
+    Buttons for digits 0-9 are used to enter numbers.
+    Operator buttons +, -, x, / perform arithmetic operations.
+    Clear button clears the input.
+    '=' button evaluates the expression and displays result.
+
+This layout is passed to PySimpleGUI Window to create the actual GUI.
+Event Loop
+
+A while True loop is used to handle events and update the GUI.
+
+    When a digit button is clicked, it is appended to the 'expression' variable and shown in the Input.
+    When an operator is clicked, it gets appended to the expression.
+    Clicking '=' evaluates the expression using eval() and updates the result in Input.
+    Pressing 'Clear' resets the expression and Input.
+    Win_Closed event closes the window and ends program.
+
+Key Functions
+
+    update(): Updates specified Input element with given value
+    eval(): Evaluates the input expression string as Python code
+    str(): Converts result to string to display in Input
+
+Usage
+
+The user can click digits and operators to build an expression, and press '=' to evaluate the result. Clear button resets the calculator.
+
+This provides a simple yet functional calculator GUI without using Tkinter module. The logic can be enhanced to add more features.
