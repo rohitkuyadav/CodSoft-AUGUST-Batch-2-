@@ -1,0 +1,44 @@
+Here is a documentation for the weather application code:
+
+# Weather Application
+
+## Overview
+This is a Python GUI application to fetch and display weather information for a given city using OpenWeatherMap API.
+
+## Imports
+The code imports required Python modules:
+
+- tkinter - For building GUI
+- requests - To make API calls 
+- json - To parse API response
+- messagebox - For displaying popup messages
+
+## API Setup
+An API key from OpenWeatherMap is stored in a variable to be used in API calls.
+
+## GUI Window
+The main application window is created using Tkinter. Labels, entry box and buttons are added for taking user input and displaying weather data.
+
+## Weather Data Function 
+A function `get_weather()` is defined to call API, parse response and update GUI.
+
+- City name is read from input box
+- API URL is prepared with API key and city name
+- JSON response is parsed to extract weather details like temperature, humidity, description
+- The weather details are shown in the label by updating its text
+- Appropriate error is displayed for invalid city name
+
+## Event Binding
+The button click calls the `get_weather()` function to fetch and display weather data.
+
+## Output
+The application shows the current temperature, humidity and weather condition for a given city. It validates input and handles errors.
+
+## Enhancements
+- Show 5-day forecast data
+- Add weather icons 
+- Allow adding multiple cities
+- Store previously fetched data
+- Deploy as executable application
+
+So in summary, it provides a simple GUI app to display live weather data using OpenWeatherMap API in Python.
